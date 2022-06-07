@@ -17,6 +17,16 @@ body {
 /* End Bootsrtap carousel */
 
 
+.homesquare {   
+	background-image:linear-gradient(0deg, rgba(196.4800089597702, 248.0000004172325, 86.9999948143959, 1) 0%,rgba(255, 98.01999628543854, 87.99999475479126, 1) 100%) ;
+	width:1430px;
+	height:805px;
+	position:absolute;
+	left:0px;
+	top:-21px;
+	clip-path: polygon(100% 0, 0 0, 0 100%);  /* Code for the cut */
+}
+
 .my_img{
     width: 100%;
     height: auto; 
