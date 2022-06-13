@@ -1,6 +1,6 @@
 <?php include("head_nav.html");?>
 
-
+<?php include("full-carousel-cover.html");?>
 
 
 
