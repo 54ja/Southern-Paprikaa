@@ -658,7 +658,7 @@ padding: 10px;
 /* General */
 
 .nav{
-  background-color: white;
+  background-color:white;
 }
 
 a {
@@ -759,4 +759,23 @@ a {
 
 .nav-social-icon {
   font-size: 16px;
+}
+
+
+
+.logo {
+  padding-left: 50px;
+}
+
+@media (max-width: 766px) {
+  .logo
+  {
+    padding-left: 0px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+    
+    
+  }
 }
