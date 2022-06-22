@@ -4,10 +4,12 @@
 
 
 
-<div class="jumbotron text-center"> 
 
 
-</div>
+<?php include("gallery.html");?>
+
+
+
 
 <div class="h1">Southern Paprika</div>
 <p></p>
