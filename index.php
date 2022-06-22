@@ -6,7 +6,7 @@
 
 
 
-<?php include("gallery.html");?>
+<?php include("test.php");?>
 
 
 
