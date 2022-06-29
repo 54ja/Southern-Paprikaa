@@ -6,7 +6,7 @@
 
 
 
-<?php include("test.php");?>
+<?php include("gallery.html");?>
 
 
 
@@ -22,6 +22,7 @@
   
 
 <div class="main text-center">
+
   
 
 </div>
