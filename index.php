@@ -5,7 +5,7 @@
 
 
 
-
+<header><h1>Our Team</h1></header>
 <?php include("gallery.html");?>
 
 

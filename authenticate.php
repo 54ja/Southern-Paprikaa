@@ -1,16 +1,44 @@
-<?php
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Login</title>
+		<link href="login.css" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+		
+		
+			
+	</head>
+	<body>
+		
+		<div class="login">
+				
+			<button onclick="location.href='index.php'" class="button2 button" href="index.php">Home</button>
+			<h1>Login</h1>
+			<form action="authenticate.php" method="post">
+				<label for="username">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="username" placeholder="Username" id="username" required>
+				<label for="password">
+					<i class="fas fa-lock"></i>
+				</label>
+				<input type="password" name="password" placeholder="Password" id="password" required>
+				<?php
 session_start();
 // Change this to your connection info.
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
 $DATABASE_PASS = '';
-$DATABASE_NAME = 'phplogin';
+$DATABASE_NAME = 'sp';
 // Try and connect using the info above.
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if ( mysqli_connect_errno() ) {
 	// If there is an error with the connection, stop the script and display the error.
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
+
 
 // Now we check if the data from the login form was submitted, isset() will check if the data exists.
 if ( !isset($_POST['username'], $_POST['password']) ) {
@@ -25,36 +53,35 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 	$stmt->execute();
 	// Store the result so we can check if the account exists in the database.
 	$stmt->store_result();
+	if ($stmt->num_rows > 0) {
+		$stmt->bind_result($id, $password);
+		$stmt->fetch();
+		// Account exists, now we verify the password.
+		// Note: remember to use password_hash in your registration file to store the hashed passwords.
+		if (password_verify($_POST['password'], $password)) {
+			// Verification success! User has logged-in!
+			// Create sessions, so we know the user is logged in, they basically act like cookies but remember the data on the server.
+			session_regenerate_id();
+			$_SESSION['loggedin'] = TRUE;
+			$_SESSION['name'] = $_POST['username'];
+			$_SESSION['id'] = $id;
+			header('Location: home.php');
+		} else {
+			// Incorrect password
+			echo 'Incorrect username and/or password!';
+		}
+	} else {
+		// Incorrect username
+		echo 'Incorrect username and/or password!';
+	}
 
 
 	$stmt->close();
 }
 ?>
-
-$stmt->store_result();
-
-if ($stmt->num_rows > 0) {
-	$stmt->bind_result($id, $password);
-	$stmt->fetch();
-	// Account exists, now we verify the password.
-	// Note: remember to use password_hash in your registration file to store the hashed passwords.
-	if (password_verify($_POST['password'], $password)) {
-		// Verification success! User has logged-in!
-		// Create sessions, so we know the user is logged in, they basically act like cookies but remember the data on the server.
-		session_regenerate_id();
-		$_SESSION['loggedin'] = TRUE;
-		$_SESSION['name'] = $_POST['username'];
-		$_SESSION['id'] = $id;
-		echo 'Welcome ' . $_SESSION['name'] . '!';
-	} else {
-		// Incorrect password
-		echo 'Incorrect username and/or password!';
-	}
-} else {
-	// Incorrect username
-	echo 'Incorrect username and/or password!';
-}
-
-if (password_verify($_POST['password'], $password)) {
-
-    if ($_POST['password'] === $password) {
+				<input type="submit" value="Login">
+				
+			</form>
+		</div>
+	</body>
+</html>

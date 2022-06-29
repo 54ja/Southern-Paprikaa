@@ -58,3 +58,26 @@ body {
   background-color: #2868c7;
     transition: background-color 0.2s;
 }
+
+    button {
+        border: none;
+        color: white;
+        padding: 16px 178px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        background-color: lightblue; 
+        color: black; 
+        border: 2px solid #008CBA;  
+        margin: -0.25px;
+    
+    
+}
+
+button:hover {
+    background-color: #008CBA;
+    color: white;
+}
