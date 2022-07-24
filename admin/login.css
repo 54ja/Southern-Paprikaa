@@ -59,10 +59,10 @@ body {
     transition: background-color 0.2s;
 }
 
-    button {
+    .button2 {
         border: none;
         color: white;
-        padding: 16px 178px;
+        padding: 16px 87px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
@@ -76,6 +76,31 @@ body {
     
     
 }
+.button1 {
+    border: none;
+    color: white;
+    padding: 16px 87px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: lightblue; 
+    color: black; 
+    border: 2px solid #008CBA;  
+    margin: -0.25px;
+
+}
+
+.row{
+    text-align:center;
+    /*the same margin which is every button have, it is for small screen, and if you have many buttons.*/
+    margin-left:-20px;
+    marin-right:-20px;
+  }
+
+    
 
 button:hover {
     background-color: #008CBA;
