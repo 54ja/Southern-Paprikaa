@@ -13,10 +13,14 @@
 	<body>
 		
 		<div class="login">
-				<div class="row">
+				
+			<div class="row">
 					<h1>Login</h1>
-			<button onclick="location.href='../index.php'" class="button2 button">Home</button> <button onclick="location.href='password.html'" class="button1 button">Register</button>
-				</div>
+					<div class="nav" href="../index.php">
+						<span>Home</span></div>
+						<div class="nav" href="password.html">
+							<span>Register</span> </div>
+		</div>
 			<form action="authenticate.php" method="post">
 				<label for="username">
 					<i class="fas fa-user"></i>

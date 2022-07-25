@@ -1,5 +1,26 @@
-<?php include("head_nav.html");?>
+<?php include "setup.php";
 
+//$sql = "SELECT results_id, standardnum, title, core_id, result, date FROM results";
+$sql= "SELECT `title`,`content`,`image`
+FROM pages
+INNER JOIN Core ON results.core_id = core.core_id
+WHERE core.core_id = 1";
+
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+  // output data of each row
+    
+  while($row = $result->fetch_assoc()) {
+      //print_r ($row);
+    echo "<br>"."id: " . " - Name: " . $row["title"]. " " . $row["content"]." ".$row["image"];
+  }
+} else {
+  echo "0 results";
+}
+$conn->close();
+?>
+<?php include("head_nav.html");?>
+  
 <?php include("full-carousel-cover.html");?>
 
 
