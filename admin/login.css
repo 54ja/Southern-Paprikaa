@@ -123,26 +123,27 @@ body {
 }
 
 
-.nav{
-border: none;
-color: white;
-padding: 16px 87px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 16px;
-transition-duration: 0.4s;
-cursor: pointer;
-background-color: lightblue; 
-color: black; 
-border: 2px solid #008CBA;  
-margin: -0.25px;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
 }
 
+li {
+  float: left;
+}
 
-.row{
-    text-align:center;
-    /*the same margin which is every button have, it is for small screen, and if you have many buttons.*/
-    margin-left:-20px;
-    marin-right:-20px;
-  }
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 74px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}

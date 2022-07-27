@@ -1,38 +1,22 @@
-<?php include "setup.php";
-
-//$sql = "SELECT results_id, standardnum, title, core_id, result, date FROM results";
-$sql= "SELECT `title`,`content`,`image`
-FROM pages
-INNER JOIN Core ON results.core_id = core.core_id
-WHERE core.core_id = 1";
-
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-  // output data of each row
+<?php include("setup.php");?>  <!-- This is the setup file. -->
     
-  while($row = $result->fetch_assoc()) {
-      //print_r ($row);
-    echo "<br>"."id: " . " - Name: " . $row["title"]. " " . $row["content"]." ".$row["image"];
-  }
-} else {
-  echo "0 results";
-}
-$conn->close();
-?>
-<?php include("head_nav.html");?>
+
+</head>
+<?php include("head_nav.html");?> <!-- This is the head and nav file. -->
+
   
-<?php include("full-carousel-cover.html");?>
+<?php include("full-carousel-cover.html");?> <!-- This is the full-carousel-cover file. -->
 
 
 
 
-<header><h1>Our Team</h1></header>
-<?php include("gallery.html");?>
+<header><h1>Our Team</h1></header> 
+<?php include("gallery.php");?>
 
 
 
 
-<div class="h1">Southern Paprika</div>
+<div class="h1">Southern Paprika</div> 
 <p></p>
 <h8>Fresh capsicums straight from the crops with fresh delivery. Feel the aroma of chilled capsicums, the crunch of a ripe sweet paprika.</h8>
 <P></P>
@@ -46,8 +30,8 @@ $conn->close();
 
   
 
-</div>
-</div>
+</div> <!-- end of main -->
+</div> <!-- end of about-section -->
 
 
         
