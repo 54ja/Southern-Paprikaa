@@ -1,7 +1,7 @@
-<?php include("head_nav.html"); ?>
+<?php include("head_nav.html"); ?> <!-- This is the navigation bar at the top of the page -->
 
 
-<div class="box main">
+<div class="box main"> 
 	
 <h1>Painting</h1>
 
@@ -9,7 +9,7 @@
 
 
 
-<div class="box side"> 
+<div class="box side">  
 
 Side
 

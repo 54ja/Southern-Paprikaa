@@ -22,6 +22,8 @@
 					<i class="fas fa-envelope"></i>
 				</label>
 				<input type="email" name="email" placeholder="Email" id="email" required>
+
+		
 				<?php
 session_start();
 // Change this to your connection info.
@@ -55,6 +57,7 @@ if (preg_match('/^[a-zA-Z0-9]+$/', $_POST['username']) == 0) {
 if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
 	exit('Password must be between 5 and 20 characters long!');
 }
+
 // We need to check if the account with that username exists.
 if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
 	// Bind parameters (s = string, i = int, b = blob, etc), hash the password using the PHP password_hash function.
@@ -88,8 +91,7 @@ $stmt->bind_param('ssss', $_POST['username'], $password, $_POST['email'], $uniqi
 }
 $con->close();
 ?>
-
-<input type="submit" value="Register">
+				<input type="submit" value="Register">
 			</form>
 		</div>
 	</body>
