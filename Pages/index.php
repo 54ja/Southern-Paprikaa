@@ -1,17 +1,17 @@
-<?php include("setup.php");?>  <!-- This is the setup file. -->
+<?php include("../pages/setup.php");?>  <!-- This is the setup file. -->
     
 
 </head>
-<?php include("head_nav.html");?> <!-- This is the head and nav file. -->
+<?php include("../pages/head_nav.html");?> <!-- This is the head and nav file. -->
 
   
-<?php include("full-carousel-cover.html");?> <!-- This is the full-carousel-cover file. -->
+<?php include("../pages/full-carousel-cover.html");?> <!-- This is the full-carousel-cover file. -->
 
 
 
 
 <header><h1>Our Team</h1></header> 
-<?php include("gallery.php");?>
+<?php include("../pages/gallery.php");?>
 
 
 
@@ -35,7 +35,7 @@
 
 
         
-<?php include("footer.html");?>
+<?php include("../pages/footer.html");?>
 
 
 

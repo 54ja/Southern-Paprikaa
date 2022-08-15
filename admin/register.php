@@ -23,6 +23,8 @@
 				</label>
 				<input type="email" name="email" placeholder="Email" id="email" required>
 
+				<input type="submit" value="Register">
+
 		
 				<?php
 session_start();
@@ -91,7 +93,7 @@ $stmt->bind_param('ssss', $_POST['username'], $password, $_POST['email'], $uniqi
 }
 $con->close();
 ?>
-				<input type="submit" value="Register">
+				
 			</form>
 		</div>
 	</body>

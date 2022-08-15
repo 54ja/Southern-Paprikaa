@@ -1,4 +1,4 @@
-<?php include("head_nav.html"); ?>
+<?php include("../pages/head_nav.html"); ?>
         
        <!--Section: Contact v.2-->
 <section class="mb-4">
@@ -97,5 +97,5 @@
 </section>
 <!--Section: Contact v.2--> 
 
-<?php include("footer.html"); ?>
+<?php include("../pages/footer.html"); ?>
         

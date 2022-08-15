@@ -55,24 +55,11 @@ $conn->close();
     <th>Paragraph</th>
     <th>Image</th>
   </tr>
-  <tr>
-	<td><?php echo "$id"; ?></td>
+	<td><?php echo "$id"; ?><a href='edit_page.php?id=<?php print $id; ?>'>Edit</a></td>
     <td><?php echo "$title1"; ?> </td>
     <td><?php echo "$para1"; ?></td>
     <td><?php echo "$image1"; ?></td>
-  </tr>
-  
-  <tr>
-	<td><?php echo "$id"; ?></td>
-    <td><?php echo "$title2"; ?> </td>
-    <td><?php echo "$para2"; ?></td>
-    <td><?php echo "$image2"; ?></td>
-  </tr>
-  <tr>
-	<td><?php echo "$id"; ?></td>
-    <td><?php echo "$title3"; ?> </td>
-    <td><?php echo "$para3"; ?></td>
-    <td><?php echo "$image3"; ?></td>
+
   </tr>
 </table>
 		</div>

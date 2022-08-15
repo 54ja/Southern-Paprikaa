@@ -1,4 +1,4 @@
-<?php include("head_nav.html");?>
+<?php include("../pages/head_nav.html");?>
 
 <div class="jumbotron text-center">
 <div class="main">
@@ -41,4 +41,4 @@
 </div>
 </div>
 
-<?php include("footer.html");?>
+<?php include("../pages/footer.html");?>
