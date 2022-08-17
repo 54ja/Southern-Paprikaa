@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 
+<?php session_start(); 
 
+
+
+ ?>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -17,8 +21,8 @@
 			
 					<h1>Login</h1>
 					<ul>
-						<li><a href="../index.php">Home</a></li>
-						<li><a href="password.html">Register</a></li>
+						<li><a href="../pages/index.php">Home</a></li>
+						<li><a href="password.php">Register</a></li>
 						
 					  </ul>
 		
@@ -33,6 +37,9 @@
 					<i class="fas fa-lock"></i>
 				</label>
 				<input type="password" name="password" placeholder="Password" id="password" required>
+				<?php if(isset($_SESSION['message'])){ 
+					echo $_SESSION['message'];
+					unset($_SESSION['message']); }?>
 				<input type="submit" value="Login">
 			</form>
 		</div>

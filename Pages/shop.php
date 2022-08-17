@@ -6,7 +6,7 @@
 <div class="row">
 <div class="column">
 <div class="card">
-<img src="images/redcap.jpeg" alt="Capsicum" style="width:100%;">
+<img src="../images/redcap.jpeg" alt="Capsicum" style="width:100%;">
       <div class="container">
         <h2>Capsicums</h2>
         
@@ -17,7 +17,7 @@
 
   <div class="column">
     <div class="card">
-      <img src="images/avocado.jpeg" alt="Avocados" style="width:100%;">
+      <img src="../images/avocado.jpeg" alt="Avocados" style="width:100%;">
       <div class="container">
         <h2>Avocados</h2>
         
@@ -28,7 +28,7 @@
 
   <div class="column">
     <div class="card">
-      <img src="images/cucumber.jpeg" alt="Cucumber" style="width:100%;">
+      <img src="../images/cucumber.jpeg" alt="Cucumber" style="width:100%;">
       <div class="container">
         <h2>Cucumbers</h2>
         

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -22,6 +23,9 @@
 					<i class="fas fa-envelope"></i>
 				</label>
 				<input type="email" name="email" placeholder="Email" id="email" required>
+				<?php if(isset($_SESSION['message'])){ 
+					echo $_SESSION['message'];
+					unset($_SESSION['message']); }?>
 				<input type="submit" value="Register">
 			</form>
 		</div>

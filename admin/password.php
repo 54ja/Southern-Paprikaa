@@ -3,9 +3,12 @@
     var x = prompt("Enter in the password "," ");
     if (x.toLowerCase() == 1234) {
      alert("Success!  \n \n Logging in");
-     window.location = "register.htmk";
+     window.location = "../admin/registerpage.php";
+
+
     }
     else {
-     window.location = "../index.php";
+        alert("Incorrect password  \n \n Redirecting to homepage");
+     window.location = "../pages/index.php";
     }
     </script>

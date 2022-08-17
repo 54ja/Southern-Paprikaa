@@ -67,10 +67,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-body {
-    background-color: #435165;
-    margin: 0;
-}
+
 .register {
     width: 400px;
     background-color: #ffffff;

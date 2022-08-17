@@ -1,34 +1,4 @@
 
-
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Login</title>
-		<link href="login.css" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-		
-		
-			
-	</head>
-	<body>
-		
-		<div class="login">
-					<h1>Login</h1>
-					<ul>
-						<li><a href="../index.php">Home</a></li>
-						<li><a href="password.html">Register</a></li>
-						
-					  </ul>
-			
-			<form action="authenticate.php" method="post">
-				<label for="username">
-					<i class="fas fa-user"></i>
-				</label>
-				<input type="text" name="username" placeholder="Username" id="username" required>
-				<label for="password">
-					<i class="fas fa-lock"></i>
-				</label>
-				<input type="password" name="password" placeholder="Password" id="password" required>
 				<?php
 session_start();
 // Change this to your connection info.
@@ -73,19 +43,18 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 		} else {
 			// Incorrect password
 			echo 'Incorrect username and/or password!';
+			header('Location: login.php');
+			$_SESSION['message'] = "Incorrect username and/or password!";
 		}
 	} else {
 		// Incorrect username
 		echo 'Incorrect username and/or password!';
+		header('Location: login.php');
+		$_SESSION['message'] = "Incorrect username and/or password!";
 	}
 
 
 	$stmt->close();
 }
 ?>
-				<input type="submit" value="Login">
-				
-			</form>
-		</div>
-	</body>
-</html>
+			

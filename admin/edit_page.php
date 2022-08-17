@@ -10,8 +10,8 @@ if (!isset($_SESSION['loggedin'])) {
 <?php 
     print_r($_GET);
     $pageID= $_GET["id"]; ?>
-<?php include("../../pages/setup.php");?> 
-<?php include("../pages/admin_nav.html");?> 
+<?php include("../pages/setup.php");?> 
+<?php include("admin_nav.html");?> 
 
 <style>
  /* Style inputs, select elements and textareas */
