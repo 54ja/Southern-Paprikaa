@@ -1,4 +1,4 @@
-<?php include("../pages/head_nav.html"); ?>
+<?php include("../pages/head_nav.php"); ?>
 
 <style>
  /* Style inputs with type="text", select elements and textareas */
@@ -23,6 +23,7 @@ input[type=submit] {
   cursor: pointer;
 }
 
+
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
   background-color: #45a049;
@@ -35,7 +36,7 @@ input[type=submit]:hover {
   padding: 20px;
 }
 </style>
-        
+<div class="bg">
 <div class="container">
   <form action="action_page.php">
 
@@ -51,6 +52,7 @@ input[type=submit]:hover {
     <input type="submit" value="Submit">
 
   </form>
+</div>
 </div>
 
 <?php include("../pages/footer.html"); ?>

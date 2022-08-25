@@ -2,7 +2,7 @@
     
 
 </head>
-<?php include("../pages/head_nav.html");?> <!-- This is the head and nav file. -->
+<?php include("../pages/head_nav.php");?> <!-- This is the head and nav file. -->
 
   
 <?php include("../pages/full-carousel-cover.html");?> <!-- This is the full-carousel-cover file. -->

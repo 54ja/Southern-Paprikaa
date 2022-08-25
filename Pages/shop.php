@@ -1,4 +1,4 @@
-<?php include("../pages/head_nav.html");?>
+<?php include("../pages/head_nav.php");?>
 
 <div class="jumbotron text-center">
 <div class="main">

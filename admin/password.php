@@ -11,4 +11,6 @@
         alert("Incorrect password  \n \n Redirecting to homepage");
      window.location = "../pages/index.php";
     }
+
+   
     </script>

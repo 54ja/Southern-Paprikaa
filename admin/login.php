@@ -22,7 +22,7 @@
 					<h1>Login</h1>
 					<ul>
 						<li><a href="../pages/index.php">Home</a></li>
-						<li><a href="password.php">Register</a></li>
+						<li><a href="register.php">Register</a></li>
 						
 					  </ul>
 		

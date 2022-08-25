@@ -3,7 +3,13 @@
 session_start();
 // If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
-	header('Location: index.html');
+	header('Location: login.php');
+	$_SESSION['message'] = "Please login to access this page!";
+	exit;
+}
+if (!isset($_SESSION['admin'])) {
+	header('Location: login.php');
+	$_SESSION['message'] = "Use an admin account to access this page!";
 	exit;
 }
 ?>
