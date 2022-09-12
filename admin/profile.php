@@ -26,7 +26,7 @@ $stmt->close();
 ?>
 
 
-<?php include("admin_nav.html");?> 
+<?php include("admin_nav.php");?> 
 
 
 		<div class="content">

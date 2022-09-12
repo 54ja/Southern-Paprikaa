@@ -17,7 +17,7 @@ if (!isset($_SESSION['admin'])) {
     print_r($_GET);
     $pageID= $_GET["id"]; ?>
 <?php include("../pages/setup.php");?> 
-<?php include("admin_nav.html");?> 
+<?php include("admin_nav.php");?> 
 
 <style>
  /* Style inputs, select elements and textareas */

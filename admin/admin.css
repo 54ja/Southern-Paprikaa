@@ -71,6 +71,12 @@ body.loggedin {
   }
 
   
+  
+ 
+ 
+ 
+ 
+ 
   /* Navagation */
 
 .nav{
@@ -95,6 +101,9 @@ body.loggedin {
 	border-radius: 0 !important;
   }
   
+
+
+  
   /* Navbar */
   .navbar-brand {
 	margin-left: 4em;
@@ -102,10 +111,11 @@ body.loggedin {
 	letter-spacing: 0.09em;
   }
   
-  /*.navbar-nav {
-	margin-right: 4em;
-  }*/
-  
+  span {
+color: #ddd;
+
+} 
+
   .navbar-primary {
 	justify-content: flex-end;
 	margin: auto 4rem;
@@ -120,11 +130,6 @@ body.loggedin {
 	text-transform: uppercase;
   }
   
-  /*.navbar-nav span {
-	margin-right: 1rem;
-	margin-left: 2rem;
-  }*/
-  
   .custom-toggler.navbar-toggler {
 	border-color: transparent;
   }
@@ -136,16 +141,6 @@ body.loggedin {
   .nav-item {
 	position: relative;
   }
-  
-  /*.nav-item:after {
-	content: "/";
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 0%;
-	border-bottom: 1px solid black;
-	transition: 0.4s;
-  }*/
   
   .navbar-primary .nav-item:after {
 	content: "/";

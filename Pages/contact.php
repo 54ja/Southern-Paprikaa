@@ -1,4 +1,8 @@
-<?php include("../pages/head_nav.php"); ?>
+
+<?php 
+session_start();
+include("../pages/head_nav.php"); ?>
+
 
 <style>
  /* Style inputs with type="text", select elements and textareas */
@@ -32,28 +36,51 @@ input[type=submit]:hover {
 /* Add a background color and some padding around the form */
 .container {
   border-radius: 5px;
-  background-color: #fff;
-  padding: 20px;
+  background-color: #f2f2f2;
+  padding: 15px;
 }
+
+form {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #B0C4DE;
+  border-radius: 2px;
+  background: #f4f4f4;
+  float: left;
+}
+
+
 </style>
 <div class="bg">
-<div class="container">
-  <form action="action_page.php">
+<div style="
+  background-color: #f2f2f2;">
+<div class="container col-sm-8">
+<?php if(isset($_SESSION['messages'])){ 
+					?><h1><?php echo $_SESSION['messages']; ?></h1> <?php
+					unset($_SESSION['messages']); }?>
+  <form action="action_page.php" method="post">
+    
 
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name..">
 
-    <label for="lname">Email</label>
-    <input type="text" id="lname" name="email" placeholder="Your email..">
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" placeholder="Your email..">
 
     <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    <input type="text" id="subject" name="subject" placeholder="Subject..">
+    
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Write something.." style="height:100px"></textarea>
 
     <input type="submit" value="Submit">
 
   </form>
-</div>
-</div>
 
+<iframe class="col-sm-4" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12844.17349144028!2d174.6068876981735!3d-36.40814590662162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0cde0f62b19b8b%3A0xd35375d999ab338d!2sSouthern%20Paprika%20Limited!5e0!3m2!1sen!2snz!4v1662329849823!5m2!1sen!2snz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+</div>
 <?php include("../pages/footer.html"); ?>
         

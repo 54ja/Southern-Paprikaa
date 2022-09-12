@@ -1,44 +1,51 @@
-<?php include("../pages/head_nav.php");?>
+<?php include("setup.php");?> 
 
-<div class="jumbotron text-center">
-<div class="main">
+<?php include("head_nav.php");?>
 
-<div class="row">
-<div class="column">
-<div class="card">
-<img src="../images/redcap.jpeg" alt="Capsicum" style="width:100%;">
-      <div class="container">
-        <h2>Capsicums</h2>
+<!-- <div class="jumbotron text-center">  -->
+
+
+<?php   
+    $sql = "SELECT * FROM product";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+      while($row = $result->fetch_assoc()) { 
+        #debuggin print_r($row);
+        $fruit=$row["fruit"];
+        $color=$row["color"];
+        $weight=$row["weight"];
+        $product_id=$row["product_id"];
+        $price=$row["price"];
+        $image=$row["image"];
+        ?>
+
+    <div class="column">
+      <div class="card">
+        <img src=" ../images/<?php echo $image ;?>" alt="Capsicum" style="width:100%;">
+        <div class="container">
+        <h2><?php echo $fruit ?></h2>
         
-        <h5><button>Buy now</button></h5>
+        <h5><button type="button" onclick="location.href='capshop.php?id=<?php print $product_id;?>';">Buy now</button></h5> 
       </div>
     </div>
   </div>
-
-  <div class="column">
-    <div class="card">
-      <img src="../images/avocado.jpeg" alt="Avocados" style="width:100%;">
-      <div class="container">
-        <h2>Avocados</h2>
-        
-        <h5><button>Buy now</button></h5> 
-      </div>
-    </div>
   </div>
 
-  <div class="column">
-    <div class="card">
-      <img src="../images/cucumber.jpeg" alt="Cucumber" style="width:100%;">
-      <div class="container">
-        <h2>Cucumbers</h2>
-        
-        <h5><button>Buy now</button></h5>
- 
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-</div>
+  
+  <?php
+      }
+      
+    }?>
+
+  
+
+
+
+
+
+
+
+
 
 <?php include("../pages/footer.html");?>

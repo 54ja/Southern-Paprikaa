@@ -7,25 +7,38 @@ if (!isset($_SESSION['loggedin'])) {
 	$_SESSION['message'] = "Please login to access this page!";
 	exit;
 }
+if (!isset($_SESSION['admin'])) {
+	header('Location: login.php');
+	$_SESSION['message'] = "Use an admin account to access this page!";
+	exit;
+}
 ?>
 
 <?php include("../pages/setup.php");?> 
-<?php include("admin_nav.html");?> 
+<?php include("admin_nav.php");?> 
 
 
 
 
 			<div class="content">
 			<h2>Edit Page</h2>
+
+
+      <table id="customers">
+  <tr>
+	<th>Page number</th>
+    <th>Title</th>
+    <th>Paragraph</th>
+    <th>Image</th>
+  </tr>
 			
 			
 			<?php   
-    $sql = "SELECT * FROM pages where id=1";
+    $sql = "SELECT * FROM pages";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        // output data of each row
-        $row = $result->fetch_assoc(); 
+      while($row = $result->fetch_assoc()) { 
         #debugging print_r($row);
 		$id=$row["id"];
         $title1=$row["title1"];
@@ -40,8 +53,15 @@ if (!isset($_SESSION['loggedin'])) {
         $para3=$row["para3"];
         $image3=$row["image3"];
        
+?>  <td><?php echo "$id"; ?><a href='edit_page.php?id=<?php print $id; ?>'>Edit</a></td>
+    <td><?php echo "$title1"; ?> </td>
+    <td><?php echo "$para1"; ?></td>
+    <td><?php echo "$image1"; ?></td>
+
+  </tr> <?php
+
       
-    } else {
+    }} else {
         echo "0 results";
     }
 $conn->close();
@@ -49,20 +69,8 @@ $conn->close();
     ?>
 
 
-			<table id="customers">
-  <tr>
-	<th>Page number</th>
-    <th>Title</th>
-    <th>Paragraph</th>
-    <th>Image</th>
-  </tr>
-	<td><?php echo "$id"; ?><a href='edit_page.php?id=<?php print $id; ?>'>Edit</a></td>
-    <td><?php echo "$title1"; ?> </td>
-    <td><?php echo "$para1"; ?></td>
-    <td><?php echo "$image1"; ?></td>
-
-  </tr>
-</table>
+		
+    </table>
 		</div>
 	</body>
 </html>
