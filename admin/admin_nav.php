@@ -29,7 +29,7 @@
 		
 		<nav class="navbar sticky-top navbar-expand-md navbar-light nav">
 		  <!-- <div class="mx-auto d-sm-flex d-block flex-sm-nowrap"> --> 
-		 <h1>Website Title</h1>
+		 <h1>Admin</h1>
 		  <button class="navbar-toggler mr-left custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		  </button>
@@ -59,6 +59,7 @@
 					  <?php } ?>	
 
 
+					  
 <?php if(isset($_SESSION['admin'])){
 	?>			
 			  <li class="nav-item">
@@ -67,10 +68,6 @@
 				</a>
 			  </li>
 			<?php } ?>	 
-			  <li class="nav-item">
-				<a class="nav-link" href="profile.php">
-				  <span>Profile</span></a>
-			  </li>
 			  <li class="nav-item">
 				<a class="nav-link" href="logout.php">
 				  <span>Logout</span>

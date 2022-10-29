@@ -97,7 +97,7 @@ input[type=submit] {
         // output data of each row
         $row = $result->fetch_assoc(); 
         #debugging print_r($row);
-		$pageID=$row["id"];
+		    $pageID=$row["id"];
         $title1=$row["title1"];
         $para1=$row["para1"];
         $image1=$row["image1"];

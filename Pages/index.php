@@ -10,7 +10,7 @@
 
 
 
-<header><h1>Our Team</h1></header> 
+<header class="text-center our">Our Team</header> 
 <?php include("../pages/gallery.php");?>
 
 
