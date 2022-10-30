@@ -26,7 +26,7 @@
         <div class="container">
         <h2><?php echo $fruit ?></h2>
         
-        <h5><button type="button" onclick="location.href='capshop.php?id=<?php print $product_id;?>';">Buy now</button></h5> 
+        <h5><button type="button" onclick="location.href='capshop.php?product_id=<?php print $product_id;?>';">Buy now</button></h5> 
       </div>
     </div>
   </div>

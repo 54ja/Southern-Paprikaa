@@ -1,4 +1,4 @@
-<?php
+ <?php
 // We need to use sessions, so you should always start sessions using the below code.
 session_start();
 // If the user is not logged in redirect to the login page...
@@ -40,7 +40,7 @@ if (!isset($_SESSION['admin'])) {
     if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) { 
         #debugging print_r($row);
-		$id=$row["id"];
+		    $id=$row["id"];
         $title1=$row["title1"];
         $para1=$row["para1"];
         $image1=$row["image1"];

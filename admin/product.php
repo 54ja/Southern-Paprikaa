@@ -48,7 +48,10 @@ if (!isset($_SESSION['admin'])) {
             <div class="col-lg-12">
               <div class="card">
                 <div class="card-header border-bottom">
-                  <h3 class="h4 mb-0">All form elements</h3>
+                  <h3 class="h4 mb-0"> <?php if(isset($_SESSION['message'])){ 
+					echo $_SESSION['message'];
+					unset($_SESSION['message']); }?></h3>
+         
         
   <table id="customers">
     <tr>
@@ -75,8 +78,8 @@ if (!isset($_SESSION['admin'])) {
 ?>
     <tr>
     <td><?php print $product_id; ?>
-          <a href='product_delete.php?prints_id=<?php print $product_id; ?>'>Delete?</a>
-          <a href='product_edit.php?prints_id=<?php print $product_id; ?>'>Edit</a>
+          <a href='product_delete.php?product_id=<?php print $product_id; ?>'>Delete?</a>
+          <a href='product_edit.php?product_id=<?php print $product_id; ?>'>Edit</a>
           </td>
       <td><?php print $fruit; ?></td>
       <td><?php print $color; ?></td>

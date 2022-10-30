@@ -3,7 +3,7 @@
         <?php include("../pages/setup.php");?>  <!-- This is the setup file. -->
         <?php 
     print_r($_GET);
-    $product_id= $_GET["id"]; ?>
+    $product_id= $_GET["product_id"]; ?>
 
 
     <?php   
@@ -36,7 +36,7 @@ $conn->close();
     
        
         <!-- Product section-->
-        <form action="edit_action_page.php" method="post" >
+        <form action="../admin/buy.php" method="post" >
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">

@@ -51,18 +51,16 @@ if (!isset($_SESSION['admin'])) {
         $message=$row["message"];
       
 
-        
-?>        
- <tbody>
+    ?>        
     <tr>
-      <th scope="row"><?php echo "$id"; ?> </th>
-      <td><?php echo "$title1"; ?></td>
+    <td><?php print $id; ?>
+    <a href='mail_delete.php?id=<?php print $id; ?>'>Delete?</a>
+    </td>
+    <td><?php echo "$title1"; ?></td>
       <td><?php echo "$para1"; ?></td>
       <td><?php echo "$image1"; ?></td>
       <td><?php echo "$message"; ?></td>
     </tr>
-    </tbody>
-        
      
 <?php
     }} else {

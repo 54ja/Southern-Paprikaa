@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,21 +28,33 @@
           <span class="sr-only">(current)</span>
         </a>
       </li>
+      <?php if(isset($_SESSION['loggedin'])){?>	
       <li class="nav-item">
         <a class="nav-link" href="shop.php">
           <span>Shop</span>
         </a>
       </li>
-      
+      <?php } ?>
       <li class="nav-item">
         <a class="nav-link" href="contact.php">
           <span>Contact</span></a>
       </li>
+      
+      <?php if(isset($_SESSION['loggedin'])){?>	
+      <li class="nav-item">
+        <a class="nav-link" href="../admin/logout.php">
+          <span>Logout</span>
+        </a>
+      </li>
+      <?php } ?>
+
+      <?php if(isset($_SESSION['loggedin'])){} else {?>	
       <li class="nav-item">
         <a class="nav-link" href="../admin/login.php">
           <span>Login</span>
         </a>
       </li>
+      <?php } ?>
     </ul>
     <ul class="nav navbar-nav navbar-secondary flex-row justify-content-center flex-nowrap">
       <li class="nav-item">

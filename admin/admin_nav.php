@@ -49,7 +49,19 @@
 				</a>
 			  </li>
 			<?php } ?>	 
-			<?php if(isset($_SESSION['admin'])){?>			
+			<?php if(isset($_SESSION['admin'])){?>	
+				
+							
+				
+				<?php if(isset($_SESSION['admin'])){
+	?>			
+			  <li class="nav-item">
+				<a class="nav-link" href="product.php">
+				  <span>Products</span>
+				</a>
+			  </li>
+			<?php } ?>
+
 			  
 			  <li class="nav-item">
 						  <a class="nav-link" href="Mail.php">
@@ -57,6 +69,7 @@
 						  </a>
 						</li>
 					  <?php } ?>	
+					  
 
 
 					  

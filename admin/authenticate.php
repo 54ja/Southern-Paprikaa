@@ -47,7 +47,7 @@ if ($stmt = $con->prepare('SELECT id, password, admin FROM accounts WHERE userna
 			$_SESSION['id'] = $id;
 			$_SESSION['admin'] = $admin;
 			if ($admin ==1) { header('Location: home.php');}
-			else { header('Location: home.php');}
+			else { header('Location: ../pages/shop.php');}
 		} 
 		
 		else {
