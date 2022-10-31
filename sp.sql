@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 12, 2022 at 08:41 AM
+-- Generation Time: Oct 31, 2022 at 10:17 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.2.21
 
@@ -42,7 +42,7 @@ CREATE TABLE `accounts` (
 
 INSERT INTO `accounts` (`id`, `username`, `password`, `email`, `admin`) VALUES
 (0, 'test', '$2y$10$SfhYIDtn.iOuCW7zfoFLuuZHX6lja4lF4XA4JqNmpiH/.P3zB8JCa', 'test@test.com', NULL),
-(18, 'admin', '$2y$10$wNC4NsXcB.Omh9csclwAhe0iVHRyCNUr72LN3J5MG1wsZ/BDWlgna', 'admin@mail.com', 1);
+(19, 'admin', '$2y$10$MFcsovXseZLTEUW2Iiaw2.uO6.cdAufWTlG3p7YMm.Jy91CazrF/2', 'admin@admin.admin', 1);
 
 -- --------------------------------------------------------
 
@@ -57,13 +57,6 @@ CREATE TABLE `messages` (
   `subject` text NOT NULL,
   `message` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `messages`
---
-
-INSERT INTO `messages` (`id`, `name`, `email`, `subject`, `message`) VALUES
-(29, 'Jesse', 'Connor@mail.com', 'asdasda', 'test');
 
 -- --------------------------------------------------------
 
@@ -102,7 +95,7 @@ CREATE TABLE `pages` (
 --
 
 INSERT INTO `pages` (`id`, `title1`, `para1`, `image1`, `title2`, `para2`, `image2`, `title3`, `para3`, `image3`) VALUES
-(1, 'Picking Team', 'Our picking team consists of islanders who are come from the spc scheme. These pickers come over for about 6-24 months and then go home back to the islands where they get to bring money back to their homes and family\'s.', '../images/picking team.jpeg', 'Packing Team test', 'Packing Team test', '../images/packing team.jfif', 'Dispatch Team test', 'Dispatch Teams job is to organised and send out fruit ready to be sent to supermarkets or overseas. Packing teams job is to organise the chiller and ensure that all the fruit is in a good condition and is staying fresh.', '../images/dispatch team.jpg'),
+(1, 'Picking Team', 'Our picking team consists of islanders who are come from the spc scheme. These pickers come over for about 6-24 months and then go home back to the islands where they get to bring money back to their homes and family\'s.', '../images/picking team.jpeg', 'Packing Team test', 'Packing Team test', '../images/packing team.jpeg', 'Dispatch Team test', 'Dispatch Teams job is to organised and send out fruit ready to be sent to supermarkets or overseas. Packing teams job is to organise the chiller and ensure that all the fruit is in a good condition and is staying fresh.', '../images/dispatch team.jpg'),
 (2, 'capsicums', '', '', 'Avocados', 'Avocados', '', 'Cucumbers', '', '');
 
 -- --------------------------------------------------------
@@ -174,13 +167,13 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -198,7 +191,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
