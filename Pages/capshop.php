@@ -7,7 +7,7 @@
 
 
     <?php   
-    $sql = "SELECT * FROM product where product_id= $product_id";
+    $sql = "SELECT * FROM product, accounts where product_id= $product_id and accounts_id= $accounts_id";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -36,7 +36,7 @@ $conn->close();
     
        
         <!-- Product section-->
-        <form action="../admin/buy.php" method="post" >
+        <form action="../admin/buy.php" method="POST" >
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
@@ -53,6 +53,8 @@ $conn->close();
                         </div>
                        
                         <div class="d-flex">
+                            <input type="hidden" name="product_id" value="<?php echo "$product_id" ?>">
+                            <input type="hidden" name="account_id" value="<?php echo "$account_id" ?>">
                             <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem"/>
                             <input class="btn btn-outline-dark flex-shrink-0" type="submit" value="          Add to kart          "> 
                                 <i class="bi-cart-fill me-1"></i>
