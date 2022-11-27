@@ -28,13 +28,11 @@
           <span class="sr-only">(current)</span>
         </a>
       </li>
-      <?php if(isset($_SESSION['loggedin'])){?>	
       <li class="nav-item">
         <a class="nav-link" href="shop.php">
           <span>Shop</span>
         </a>
-      </li>
-      <?php } ?>
+</li>
       <li class="nav-item">
         <a class="nav-link" href="contact.php">
           <span>Contact</span></a>

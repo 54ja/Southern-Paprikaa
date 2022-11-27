@@ -1,6 +1,5 @@
 
 <?php 
-session_start();
 include("../pages/head_nav.php"); ?>
 
 
@@ -100,10 +99,7 @@ iframe {
 
   </form>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12844.17349144028!2d174.6068876981735!3d-36.40814590662162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0cde0f62b19b8b%3A0xd35375d999ab338d!2sSouthern%20Paprika%20Limited!5e0!3m2!1sen!2snz!4v1662329849823!5m2!1sen!2snz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12844.17349144028!2d174.6068876981735!3d-36.40814590662162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0cde0f62b19b8b%3A0xd35375d999ab338d!2sSouthern%20Paprika%20Limited!5e0!3m2!1sen!2snz!4v1662329849823!5m2!1sen!2snz" width="450" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 </div>
-
 <?php include("../pages/footer.html"); ?>
-
-        

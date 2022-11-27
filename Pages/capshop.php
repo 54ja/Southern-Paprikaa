@@ -7,7 +7,7 @@
 
 
     <?php   
-    $sql = "SELECT * FROM product, accounts where product_id= $product_id and accounts_id= $accounts_id";
+    $sql = "SELECT * FROM product where product_id= $product_id";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -54,7 +54,7 @@ $conn->close();
                        
                         <div class="d-flex">
                             <input type="hidden" name="product_id" value="<?php echo "$product_id" ?>">
-                            <input type="hidden" name="account_id" value="<?php echo "$account_id" ?>">
+                            <!-- <input type="hidden" name="account_id" value="<?php echo "$account_id" ?>"> -->
                             <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem"/>
                             <input class="btn btn-outline-dark flex-shrink-0" type="submit" value="          Add to kart          "> 
                                 <i class="bi-cart-fill me-1"></i>
