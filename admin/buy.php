@@ -25,6 +25,8 @@ if (!isset($_SESSION['loggedin'])) {
  print $sql; 
     if (mysqli_query($conn, $sql)) {
   echo "New record created successfully";
+  $_SESSION['message'] = "Oder succsesful!";
+  header('Location: ../pages/capshop.php?product_id='.$product_id);
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
@@ -33,6 +35,5 @@ if (!isset($_SESSION['loggedin'])) {
 
 
 
-         $_SESSION['message'] = "Oder succsesful!";
-			header('Location: ../pages/shop.php');
+        
    

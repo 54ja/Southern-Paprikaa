@@ -17,22 +17,51 @@ if (!isset($_SESSION['admin'])) {
 <?php include("../pages/setup.php");?> 
 <?php include("admin_nav.php");?> 
 
+<style>
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: grey;
+    color: white;
+  }</style>
 
-<div class="content">
-			<h2>Messages</h2>
+<section class="pb-5"> 
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-header border-bottom">
+                  <h3 class="h4 mb-0"> <?php if(isset($_SESSION['message'])){ 
+					echo $_SESSION['message'];
+					unset($_SESSION['message']); }?></h3>
 			
 		
-      <div class="table-responsive">    
-    <table class="table">
-    <thead class="thead-dark">
+      <table id="customers">    
+
     <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Name</th>
-      <th scope="col">Email</th>
-      <th scope="col">Subject</th>
-      <th scope="col">Message</th>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Subject</th>
+      <th>Message</th>
     </tr>
-  </thead>     
+  </thead>    
       
 
 			<?php   
@@ -64,7 +93,7 @@ if (!isset($_SESSION['admin'])) {
      
 <?php
     }} else {
-        echo "0 results";
+        echo "0 messages";
     }
 $conn->close();
       

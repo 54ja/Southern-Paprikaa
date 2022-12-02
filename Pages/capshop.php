@@ -1,7 +1,8 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         
         <?php include("../pages/setup.php");?>  <!-- This is the setup file. -->
-        <?php 
+        
+        <?php  
     print_r($_GET);
     $product_id= $_GET["product_id"]; ?>
 
@@ -16,7 +17,7 @@
         #debugging print_r($row);
         $fruit=$row["fruit"];
         $color=$row["color"];
-        $weight=$row["weight"];
+        $weight=$row["weight"]; 
         $product_id=$row["product_id"];
         $price=$row["price"];
         $image=$row["image"];
@@ -33,8 +34,11 @@ $conn->close();
 
     <?php include("head_nav.php")?>
     <link rel="newest stylesheet" href="../css/shop.css" rel="stylesheet"/>
-    
-       
+
+    <div class="order"><?php if(isset($_SESSION['message'])){ 
+					echo $_SESSION['message'];
+					unset($_SESSION['message']); }?> </div>
+
         <!-- Product section-->
         <form action="../admin/buy.php" method="POST" >
         <section class="py-5">

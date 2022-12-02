@@ -10,7 +10,11 @@ body {
     width: 100%;
   }
 
-
+.order {
+  text-align: center;
+  font-size: 3em;
+  font-weight: 500;
+}
 
 
 
